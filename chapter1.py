@@ -24,6 +24,17 @@ while True:
     if cv2.waitKey(1) & 0xFF==ord(' '): # going to add delay and wait for the keyboard spacebar press to break out of the loop
         break
 
+# accessing webcam
 
+cam=cv2.VideoCapture(0)
+# if one webcam the use 0 otherwise use id of webcam
+cam.set(3,640)  # 3 is id for width
+cam.set(4,480)  # 4 is id for height
+cam.set(10,100) # 10 is id for brightness
+while True:
+    success,img=cam.read()
+    cv2.imshow("webcam",img)
+    if cv2.waitKey(1) & 0xFF == ord(' '):
+        break
 
 
