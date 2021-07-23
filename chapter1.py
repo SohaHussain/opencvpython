@@ -9,7 +9,7 @@ import cv2
 #cv2.waitKey(0)   # 0 is for infinite time
 
 # importing video
-cap = cv2.VideoCapture("resources/test_video.mp4")   # function to import video
+#cap = cv2.VideoCapture("resources/test_video.mp4")   # function to import video
 
 # since video is just a sequence of images so we will need a while loop to go through each frame one by one
 while True:
