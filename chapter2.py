@@ -1,7 +1,7 @@
 # basic functions
 
 import cv2
-
+import numpy as np
 # loading image
 img = cv2.imread('resources/lena.png')
 
@@ -28,4 +28,11 @@ cv2.waitKey(0)
 # 100 and 100 are threshold values
 imgcan=cv2.Canny(img,100,100)
 cv2.imshow("edged image",imgcan)
+cv2.waitKey(0)
+
+# dilate image
+
+kernel = np.ones((5,5),np.uint8)
+imgdia=cv2.dilate(imgcan,kernel,iterations=1)
+cv2.imshow("dilate image",imgdia)
 cv2.waitKey(0)
