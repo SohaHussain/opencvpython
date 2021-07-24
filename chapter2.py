@@ -36,3 +36,9 @@ kernel = np.ones((5,5),np.uint8)
 imgdia=cv2.dilate(imgcan,kernel,iterations=1)
 cv2.imshow("dilate image",imgdia)
 cv2.waitKey(0)
+
+# erosion (opposite of dilation)
+
+imgero=cv2.erode(imgdia,kernel,iterations=1)
+cv2.imshow("eroded image",imgero)
+cv2.waitKey(0)
