@@ -22,3 +22,10 @@ cv2.waitKey(0)
 imgblur=cv2.GaussianBlur(imggray,(7,7),0)
 cv2.imshow("blur image",imgblur)
 cv2.waitKey(0)
+
+# edge detector
+
+# 100 and 100 are threshold values
+imgcan=cv2.Canny(img,100,100)
+cv2.imshow("edged image",imgcan)
+cv2.waitKey(0)
